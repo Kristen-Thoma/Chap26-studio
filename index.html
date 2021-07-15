@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<head>
+
+    <!--Ignore the code contained within the SCRIPT tags-->
+    <script>
+        function setSearchEngine() {
+
+            let actions = {
+                "google": "https://www.google.com/search",
+                "duckduckgo": "https://duckduckgo.com/",
+                "bing": "https://www.bing.com/search",
+                "ask": "https://www.ask.com/web"
+            };
+
+            let form = document.getElementById('searchForm');
+            let selectedEngine = document.querySelector('[name=engine]:checked');
+            let action = actions[selectedEngine.value];
+            form.setAttribute('action', action);
+        }
+
+        window.addEventListener('load', function () {
+            let form = document.getElementById('searchForm');
+            form.addEventListener('submit', setSearchEngine);
+        });
+
+        /*The JavaScript contained within these <script> tags is
+         * what causes the input of the form to update the browser window once the user clicks "Go!" */
+
+    </script>
+</head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<title>Search Engine</title>
+<link rel="stylesheet" href="./styles/style.css">
+<body>
+    <header>Search Engine</header>
+
+
+
+    <form id="searchForm">
+
+        <input type="text" name="q" value="" />
+
+        <input type="radio" name="engine" value="google" />
+        <label id="google">Google</label>
+
+        <input type="radio" name="engine" value="duckduckgo" />
+        <label id="duckduckgo">DuckDuckGo</label>
+
+        <input type="radio" name="engine" value="bing" />
+        <label id="bing">Bing</label>
+
+        <input type="radio" name="engine" value="ask" />
+        <label id="ask">Ask</label>
+
+        <button>Go!</button>
+    </form>
+</body>

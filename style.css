@@ -1,0 +1,37 @@
+﻿body
+{
+    text-align:center;
+}
+
+header
+{
+    font-size:400%;
+    margin-bottom:10%
+}
+
+#google
+{
+    color:red;
+    font-weight:bold;
+}
+
+#duckduckgo 
+{
+    color: blue;
+    font-weight: bold;
+}
+
+#bing 
+{
+    color: seagreen;
+    font-weight: bold;
+}
+
+#ask 
+{
+    color: deeppink;
+    font-weight: bold;
+}
+
+
+
